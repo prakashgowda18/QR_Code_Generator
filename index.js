@@ -7,7 +7,7 @@ inquirer
     name :"URL"
   }])
   .then((answers) => { const url=answers.URL;
-    var qr_svg = qr.image('I love QR!', { type: 'svg' });
+    var qr_svg = qr.image('I love QR!', { type: 'png' });
  qr_svg.pipe(fs.createWriteStream('qr_img.png'));
  fs.writeFile('URL.txt', url, (err) => {
   if (err) throw err;
